@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/js/swiffy-slider.min.js" crossorigin="anonymous" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/css/swiffy-slider.min.css" rel="stylesheet" crossorigin="anonymous">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script type="text/javascript" src="../assets/script/checkAdmin.js"></script>
+</head>
+<body style="background: #f5f5f5;">
+  <div id="error"> </div>
+    <div>
+        <nav class="navbar">
+            <span class="navbar-toggle" id="js-navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </span>
+            <a href="../" class="text-decoration-none h1 text-light fw-bold oneM">OneM</a>
+            <ul class="main-nav mx-5" id="js-menu">
+              <li>
+                <a href="#" class="nav-links text-decoration-none m-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                        <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                    </svg>
+                    Mahsulotlar
+                </a>
+              </li>
+              <li>
+                <a href="../profil/" class="nav-links text-decoration-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                    </svg>
+                    Profil
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-links">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                        <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                    </svg>
+                    Sevimlilar
+                </a>
+              </li>
+              <li>
+                <a href="../contact/" class="nav-links text-decoration-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-headset" viewBox="0 0 16 16">
+                        <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z"/>
+                    </svg>
+                    Aloqa
+                </a>
+              </li>
+            </ul>
+        </nav>
+    </div>
+        
+    <div class="m-1">
+        <!-- <div class="container"> -->
+            <!-- <div class="navbar-top"> -->
+                <div class="row">
+                    <div class="col-md-3 border">
+                       
+                        <div class="h4 fw-bold p-4 d-flex justify-content-center" style="font-size: 28pt; color:lightskyblue;">
+                           OneM Admin
+                        </div>
+                       
+                        <hr class="text-danger border opacity-50">
+                        <div class="tab">
+                            <button class="tablinks p-3 px-5" onclick="openCity(event, 'crtCategory')" id="defaultOpen">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-journal-plus" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 5.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 .5-.5z"/>
+                                    <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z"/>
+                                    <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z"/>
+                                  </svg>    
+                                Categoriya yaratish
+                            </button>
+                            <button class="tablinks p-3 px-5" onclick="openCity(event, 'adparoduct')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-patch-plus" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 5.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V10a.5.5 0 0 1-1 0V8.5H6a.5.5 0 0 1 0-1h1.5V6a.5.5 0 0 1 .5-.5z"/>
+                                    <path d="m10.273 2.513-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911l-1.318.016z"/>
+                                  </svg>
+                                Product qo'shish
+                            </button>
+                            <button class="tablinks p-3 px-5" onclick="openCity(event, 'Categorys')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                                  </svg>
+                                Categoriyalar
+                            </button>
+                            <button class="tablinks p-3 px-5" onclick="openCity(event, 'Products')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bookmarks" viewBox="0 0 16 16">
+                                    <path d="M2 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L7 13.101l-4.223 2.815A.5.5 0 0 1 2 15.5V4zm2-1a1 1 0 0 0-1 1v10.566l3.723-2.482a.5.5 0 0 1 .554 0L11 14.566V4a1 1 0 0 0-1-1H4z"/>
+                                    <path d="M4.268 1H12a1 1 0 0 1 1 1v11.768l.223.148A.5.5 0 0 0 14 13.5V2a2 2 0 0 0-2-2H6a2 2 0 0 0-1.732 1z"/>
+                                  </svg>
+                                Productlar
+                            </button>
+                            <button class="tablinks p-3 px-5" onclick="openCity(event, 'editcashback')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bookmarks" viewBox="0 0 16 16">
+                                    <path d="M2 4a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v11.5a.5.5 0 0 1-.777.416L7 13.101l-4.223 2.815A.5.5 0 0 1 2 15.5V4zm2-1a1 1 0 0 0-1 1v10.566l3.723-2.482a.5.5 0 0 1 .554 0L11 14.566V4a1 1 0 0 0-1-1H4z"/>
+                                    <path d="M4.268 1H12a1 1 0 0 1 1 1v11.768l.223.148A.5.5 0 0 0 14 13.5V2a2 2 0 0 0-2-2H6a2 2 0 0 0-1.732 1z"/>
+                                  </svg>
+                                Cashbackni tahrirlash
+                            </button>
+                            <button class="tablinks p-3 px-5" onclick="openCity(event, 'withdraw')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-cash-coin" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0z"/>
+                                    <path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1h-.003zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195l.054.012z"/>
+                                    <path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083c.058-.344.145-.678.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1H1z"/>
+                                    <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 5.982 5.982 0 0 1 3.13-1.567z"/>
+                                </svg>
+                                Pul yechish (min) 
+                            </button>
+                           
+                        </div>
+                    </div>
+                    <div class="col-md-9 border">
+                        <!-- Category Yaratish -->
+                        <div id="crtCategory" class="tabcontent">
+                            <h3>Categoriya Yaratish</h3>
+                            <form action="" id="createCategoryForm">
+                                <div class="mb-3">
+                                    <label for="cname" class="form-label">Categoriya nomi*</label>
+                                    <input type="text" class="form-control empt" id="cname" name="name" placeholder="Categoriya nomi..." required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="cdesc" class="form-label">Categoriya haqida*</label>
+                                    <textarea class="form-control empt" id="cdesc" name="description" rows="3" placeholder="Eng kamida 40ta belgidan iborat bo'lsin!" required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="Cimg" class="form-label">Categoriya rasmini yuklang*</label>
+                                    <input class="form-control empt" name="img" type="file" id="Cimg" multiple required>
+                                </div> 
+
+                                <div class="">
+                                    <button type="submit" id="createCategory" class="btn btn-secondary">Categoriyani Yaratish</button>
+                                </div>    
+                            </form>
+                        </div>
+                              <!--Product qoshish  -->
+                        <div id="adparoduct" class="tabcontent">
+                            <h3>Product Qo'shish</h3>
+                            <form action="" id="addProductForm">
+                                <div class="mb-3">
+                                    <label for="allCategory"  class="form-label">Categoriyani tanlang*</label>
+                                    <select class="form-select empt" name="category_name" id="allCategory"  required>
+                                        <option selected required></option>   
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="pname" class="form-label">Product nomi*</label>
+                                    <input type="text" class="form-control empt" name="name" id="pname" placeholder="Product nomi..." required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="pdesc" class="form-label">Product haqida*</label>
+                                    <textarea class="form-control empt" id="pdesc" name="description" rows="3" placeholder="Eng kamida 100ta belgidan iborat bo'lsin!" required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="cost" class="form-label">Product narxini kiriting(Faqat so'mda!)*</label>
+                                    <input type="number" class="form-control empt" name="cost" id="cost" placeholder="Product narxini kiriting..." required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="pimg" class="form-label">Product rasmini yuklang(3ta rasm yuklash shart!)*</label>
+                                    <input class="form-control empt" type="file" id="pimg" name="img" multiple required>
+                                     <input class="form-control empt" type="file" id="pimg1" name="img1" multiple required>
+                                      <input class="form-control empt" type="file" id="pimg2" name="img2" multiple required>
+                                </div>
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input empt" type="checkbox" name="delivery" value="" id="delivery">
+                                    <label class="form-check-label" for="delivery">Yetkazib berish xizmati*</label>
+                                </div>
+
+                                <div class="">
+                                    <button type="submit" class="btn btn-secondary" id="addProductBtn">Product Qo'shish</button>
+                                </div>  
+                            </form>
+                        </div>
+                              
+                              <!-- Categoriyalar -->
+                        <div id="Categorys" class="tabcontent">
+                            <h3>Categoriyalar</h3>
+                            <div id="Categorys">
+
+                            </div>
+                        </div>
+                        <!-- Productlar oxirgi 3ta -->
+                        <div id="Products" class="tabcontent">
+                            <h3>Oxirgi Productlar</h3>
+                            <div class="row p-2" id="Products">
+                    
+                            </div>
+                        </div>
+
+                        <!-- EDIT CASHBACK -->
+                        <div id="editcashback" class="tabcontent">
+                            <h3>Cashbackni Tahrirlash</h3>
+                            <form action="" id="changeCashbackform">
+                                <div class=" mb-3">
+                                  <label for="editCash" class="form-label">Faqat Foizda(%)da kiriting!*</label>
+                                  <input type="number" class="form-control empt" id="editCash" name="cashback" placeholder="Cashbackni o'zgartirish..">
+                                </div>
+                                <div class="">
+                                  <button type="submit" class="btn btn-secondary" id="changeCashbackBtn">O'zgartirish</button>
+                                </div>
+                          </form>
+                        </div>
+
+                        <div id="withdraw" class="tabcontent">
+                            <!-- <h3>Min</h3> -->
+                            <form action="" id="">
+                                <div class=" mb-3">
+                                  <label for="editCash" class="form-label">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-wallet2" viewBox="0 0 16 16">
+                                        <path d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
+                                    </svg>
+                                  </label>
+                                  <input type="number" class="form-control empt" id="editCash" name="cashback" placeholder="Cashbackni o'zgartirish..">
+                                </div>
+                                <div class="">
+                                  <button type="submit" class="btn btn-secondary" id="changeCashbackBtn">O'zgartirish</button>
+                                </div>
+                          </form>
+                        </div>
+
+                       
+                    </div>
+                </div>
+           
+    </div>
+           
+
+   
+</div>
+<script type="text/javascript" src="../assets/script/addscript.js"></script>
+<script src="../assets/script/script.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+    AOS.init();
+</script>
+</body>
+</html>
